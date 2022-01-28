@@ -9,6 +9,7 @@ public class Main {
         Author two = Author.fullname("Sergey", "Esenin");
         System.out.println("one = " + one.name + " " + one.lastName);
         System.out.println("two = " + two.name + " " + two.lastName);
+        System.out.println("two = " + two.name + " " + two.lastName);
         Book oneBook = Book.look("Man and dog", Author.fullname("Alexandr", "Pushkin"), 1323);
         Book twoBook = Book.look("Man and cat", Author.fullname("Sergey", "Esenin"), 835);
         oneBook.setYearPublications(31);
