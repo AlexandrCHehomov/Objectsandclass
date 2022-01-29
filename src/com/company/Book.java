@@ -2,22 +2,20 @@ package com.company;
 
 public class Book {
     String nameBook;
-    Author fullName;
+    Author name;
     int yearPublications;
-    public static Book look(String nameBook, Author fullName, int yearPublications) {
-        Book book = new Book();
-        book.nameBook = nameBook;
-        book.fullName = fullName;
-        book.yearPublications = yearPublications;
-        return book;
+    public Book(String nameBook, Author name, int yearPublications) {
+        this.nameBook = nameBook;
+        this.name = name;
+        this.yearPublications = yearPublications;
     }
 
     public String getNameBook() {
         return this.nameBook;
     }
 
-    public Author getFullName() {
-        return fullName;
+    public Author getName() {
+        return this.name;
     }
 
     public int getYearPublications() {
