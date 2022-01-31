@@ -1,21 +1,29 @@
 package com.company;
 
 public class Author {
-    String name;
-    String lastName;
-    public static Author fullname(String name, String lastName) {
-        Author author = new Author();
-        author.name = name;
-        author.lastName = lastName;
-        return author;
+    private final String name;
+    private final String lastname;
+
+    public Author (String name, String lastname) {
+        this.name = name;
+        this.lastname = lastname;
     }
 
     public String getName() {
         return this.name;
     }
 
-    public String getLastName() {
-        return this.lastName;
+    @Override
+    public String toString() {
+        return "Author{" +
+                "name='" + name + '\'' +
+                ", lastname='" + lastname + '\'' +
+                '}';
     }
+
+    public String getLastname() {
+        return this.lastname;
+    }
+
 
 }

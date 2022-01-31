@@ -5,16 +5,15 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        Author one = Author.fullname("Alexandr", "Pushkin");
-        Author two = Author.fullname("Sergey", "Esenin");
-        System.out.println("one = " + one.name + " " + one.lastName);
-        System.out.println("two = " + two.name + " " + two.lastName);
-        Book oneBook = Book.look("Man and dog", Author.fullname("Alexandr", "Pushkin"), 1323);
-        Book twoBook = Book.look("Man and cat", Author.fullname("Sergey", "Esenin"), 835);
+        Author Pushkin = new Author("Alexandr", "Pushkin");
+        Author Esenin = new Author("Sergey", "Esenin");
+
+        Book oneBook = new Book("Man and dog", Pushkin, 1381);
+        Book twoBook = new Book("Man and cat", Esenin, 3085);
         oneBook.setYearPublications(31);
         System.out.println("oneBook.getYearPublications() = " + oneBook.getYearPublications());
-        System.out.println("oneBook = " + oneBook.nameBook + " " + oneBook.fullName + " " + oneBook.yearPublications);
-        System.out.println("twoBook = " + twoBook.nameBook + " " + twoBook.fullName + " " + twoBook.yearPublications);
+        System.out.println("oneBook = " + oneBook);
+        System.out.println("twoBook = " + twoBook);
 
     }
 }
