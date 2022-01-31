@@ -1,12 +1,22 @@
 package com.company;
 
 public class Book {
-    String nameBook;
-    Author name;
-    int yearPublications;
-    public Book(String nameBook, Author name, int yearPublications) {
+    private final String nameBook;
+    private final Author fullName;
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "nameBook='" + nameBook + '\'' +
+                ", fullName=" + fullName +
+                ", yearPublications=" + yearPublications +
+                '}';
+    }
+
+    private int yearPublications;
+    public Book(String nameBook, Author fullName, int yearPublications) {
         this.nameBook = nameBook;
-        this.name = name;
+        this.fullName = fullName;
         this.yearPublications = yearPublications;
     }
 
@@ -14,8 +24,8 @@ public class Book {
         return this.nameBook;
     }
 
-    public Author getName() {
-        return this.name;
+    public Author getFullName() {
+        return this.fullName;
     }
 
     public int getYearPublications() {
